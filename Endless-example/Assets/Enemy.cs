@@ -11,6 +11,11 @@ public class Enemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         transform.Translate(0f, 0f, m_MoveSpeed * Time.deltaTime);
+
+        if (transform.position.z > 5)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnCollisionEnter(Collision other)
