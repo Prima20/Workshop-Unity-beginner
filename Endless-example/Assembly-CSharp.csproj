@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{F8768D01-119F-EEC2-2B6D-267EC8609193}</ProjectGuid>
+    <ProjectGuid>{D28B3C4B-BB83-00BF-E250-0C5E1999FAE9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -64,10 +64,10 @@
     <Compile Include="Assets\EnemyGenerator.cs" />
     <Compile Include="Assets\Road.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>D:/File/Unity Project/Workshop finish/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/qweasd/Documents/GitHub/endless-example/Endless-example/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/File/Unity Project/Workshop finish/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/qweasd/Documents/GitHub/endless-example/Endless-example/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
