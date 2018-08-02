@@ -1,12 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour {
 
     public float m_MoveSpeed;
-    public string SceneName;
 	
 	// Update is called once per frame
 	void Update () {
@@ -15,14 +13,6 @@ public class Enemy : MonoBehaviour {
         if (transform.position.z > 5)
         {
             Destroy(gameObject);
-        }
-    }
-
-    void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            SceneManager.LoadScene(SceneName);
         }
     }
 }

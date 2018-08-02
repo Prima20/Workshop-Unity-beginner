@@ -59,10 +59,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\Car.cs" />
+    <Compile Include="Assets\Script\CarMovement.cs" />
     <Compile Include="Assets\Script\Enemy.cs" />
     <Compile Include="Assets\Script\EnemyGenerator.cs" />
-    <Compile Include="Assets\Script\Road.cs" />
+    <Compile Include="Assets\Script\EnemyMovement.cs" />
+    <Compile Include="Assets\Script\RoadMovement.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/qweasd/Documents/GitHub/endless-example/Endless-example/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

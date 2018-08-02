@@ -13,7 +13,7 @@ public class EnemyGenerator : MonoBehaviour {
 
     void GenerateEnemy()
     {
-        Vector3 position = new Vector3(Random.Range(-3, 4), -0.55f, -28);
-        Instantiate(Enemy[Random.Range(0, Enemy.Length)], position, Quaternion.Euler(0,180,0));
+        Vector3 spawnPosition = new Vector3(Random.Range(-3, 4), -0.55f, -28);
+        Instantiate(Enemy[Random.Range(0, Enemy.Length)], spawnPosition, Quaternion.Euler(0,180,0));
     }
 }

@@ -191,7 +191,7 @@ GameObject:
   m_Layer: 0
   m_Name: EnemyGenerator
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -289,7 +289,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 282840810}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 3, z: 10.78}
+  m_LocalPosition: {x: 0, y: 3, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -316,15 +316,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4465568012269242, guid: 119b5040a6c2891449536fa9598c62f0, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4465568012269242, guid: 119b5040a6c2891449536fa9598c62f0, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4465568012269242, guid: 119b5040a6c2891449536fa9598c62f0, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4465568012269242, guid: 119b5040a6c2891449536fa9598c62f0, type: 2}
       propertyPath: m_LocalRotation.w
@@ -334,29 +334,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114757005819887772, guid: 119b5040a6c2891449536fa9598c62f0,
-        type: 2}
-      propertyPath: AnotherRoad
+    - target: {fileID: 0}
+      propertyPath: furthestRoad
       value: 
       objectReference: {fileID: 1750032944}
     - target: {fileID: 1943813317449006, guid: 119b5040a6c2891449536fa9598c62f0, type: 2}
       propertyPath: m_Name
       value: Road1
       objectReference: {fileID: 0}
-    - target: {fileID: 114757005819887772, guid: 119b5040a6c2891449536fa9598c62f0,
-        type: 2}
-      propertyPath: roadChangeMaxPosition
-      value: 25
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114757005819887772, guid: 119b5040a6c2891449536fa9598c62f0,
-        type: 2}
-      propertyPath: roadnewPosition
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 114757005819887772, guid: 119b5040a6c2891449536fa9598c62f0,
-        type: 2}
-      propertyPath: roadNewPosition
-      value: 40
+    - target: {fileID: 4465568012269242, guid: 119b5040a6c2891449536fa9598c62f0, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 119b5040a6c2891449536fa9598c62f0, type: 2}
@@ -388,13 +380,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1542212536}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbfb5418951a4694a95fd01323f83b02, type: 3}
+  m_Script: {fileID: 11500000, guid: 8273986b6622b404b8a58962721687a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MoveSpeed: 10
-  roadChangeMaxPosition: 25
-  roadNewPosition: 40
-  AnotherRoad: {fileID: 1902130219}
+  moveSpeed: 8
+  limit: 25
+  roadSize: 40
+  furthestRoad: {fileID: 1902130219}
 --- !u!64 &1542212538
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -491,13 +483,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1750032944}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbfb5418951a4694a95fd01323f83b02, type: 3}
+  m_Script: {fileID: 11500000, guid: 8273986b6622b404b8a58962721687a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MoveSpeed: 10
-  roadChangeMaxPosition: 25
-  roadNewPosition: 40
-  AnotherRoad: {fileID: 1542212536}
+  moveSpeed: 8
+  limit: 25
+  roadSize: 40
+  furthestRoad: {fileID: 1542212536}
 --- !u!64 &1750032946
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -607,17 +599,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 1826741669}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78101c5116b25c94580f5004c8302445, type: 3}
+  m_Script: {fileID: 11500000, guid: aa721a42b54108c44a4fc96ed9b0a9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Speed: 10
-  Minx: -3
+  speed: 10
+  MinX: -2
   MaxX: 3
+  SceneName: Main
 --- !u!1 &1902130219 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1943813317449006, guid: 119b5040a6c2891449536fa9598c62f0,
     type: 2}
   m_PrefabInternal: {fileID: 526373638}
+--- !u!114 &1902130220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1902130219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8273986b6622b404b8a58962721687a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 8
+  limit: 25
+  roadSize: 40
+  furthestRoad: {fileID: 1750032944}
 --- !u!1001 &1905048142
 Prefab:
   m_ObjectHideFlags: 0
@@ -627,7 +635,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4810636352530782, guid: 950a9a722737947488048a18c4487383, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 4810636352530782, guid: 950a9a722737947488048a18c4487383, type: 2}
       propertyPath: m_LocalPosition.y
