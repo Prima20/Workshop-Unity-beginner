@@ -603,7 +603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  MinX: -2
+  MinX: -3
   MaxX: 3
   SceneName: Main
 --- !u!1 &1902130219 stripped

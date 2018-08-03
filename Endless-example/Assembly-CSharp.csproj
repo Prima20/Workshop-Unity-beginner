@@ -60,7 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\CarMovement.cs" />
-    <Compile Include="Assets\Script\Enemy.cs" />
     <Compile Include="Assets\Script\EnemyGenerator.cs" />
     <Compile Include="Assets\Script\EnemyMovement.cs" />
     <Compile Include="Assets\Script\RoadMovement.cs" />
